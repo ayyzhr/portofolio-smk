@@ -37,8 +37,8 @@
         <img src="foto-aisyah.jpeg" alt="Foto Aisyah" class="about-img">
 
         <div class="about-text">
-            <p>Halo! Saya Aisyah Azzahra Putri Arini, siswi SMK jurusan PPLG. Saya tertarik membuat tampilan website yang rapi dan modern menggunakan HTML & CSS.</p>
-            <p>Saat ini saya belajar membuat berbagai projek, mulai dari portofolio, to-do list sederhana, hingga moodboard kreatif. Senang bereksperimen dengan desain agar halaman bersih, estetis, dan mudah digunakan.</p>
+            <p>Halo! Saya Aisyah Azzahra Putri Arini, siswi SMK jurusan PPLG. Saya tertarik membuat tampilan website yang rapi dan modern menggunakan HTML & CSS.</p><br>
+            <p>Saat ini saya belajar membuat berbagai projek, mulai dari portofolio, to-do list sederhana, hingga moodboard kreatif. Senang bereksperimen dengan desain agar halaman bersih, estetis, dan mudah digunakan.</p><br>
             <p>Terbuka untuk belajar hal baru dalam pemrograman dan desain web, serta ingin menjadi web developer profesional.</p>
         </div>
     </div>
@@ -48,56 +48,70 @@
     <h2>Skill Saya</h2>
 
     <div class="skills-container">
-        <div class="skill-card">HTML Dasar</div>
-        <div class="skill-card">CSS Dasar</div>
-        <div class="skill-card">UI Design Sederhana</div>
-        <div class="skill-card">Editing Gambar</div>
+        <div class="skill">HTML Dasar</div>
+        <div class="skill">CSS Dasar</div>
+        <div class="skill">UI Design Sederhana</div>
+        <div class="skill">Editing Gambar</div>
     </div>
 </section>
 
 <section id="projects" class="projects">
     <h2>Projek Saya</h2>
 
-    <details class="project-card hover-grow">
-        <summary>To Do List</summary>
-        <img src="projek1.png" alt="To Do List" class="project-img">
-        <p>Projek sederhana menggunakan HTML & CSS, fokus pada desain tampilan dan layout.</p>
-    </details>
+    <div class="projects-grid">
+        <div class="project-card">
+            <summary>To Do List</summary>
+            <img src="projek1.png" alt="To Do List" class="project-img">
+            <p>Projek sederhana menggunakan HTML & CSS, fokus pada desain tampilan dan layout.</p>
+        </div>
 
-    <details class="project-card hover-grow">
-        <summary>Moodboard Strawberry</summary>
-        <img src="projek2.png" alt="Moodboard Strawberry" class="project-img">
-        <p>Moodboard tema Strawberry, menampilkan layout estetis dan kombinasi warna inspiratif.</p>
-    </details>
+        <div class="project-card">
+            <summary>Moodboard Strawberry</summary>
+            <img src="projek2.png" alt="Moodboard Strawberry" class="project-img">
+            <p>Moodboard tema Strawberry, menampilkan layout estetis dan kombinasi warna inspiratif.</p>
+        </div>
+    </div>
 
-    <details class="project-card hover-grow">
-        <summary>Web Pendidikan (Login & Biodata Siswa)</summary>
-        <img src="pendidikan.jpeg" alt="Web Pendidikan" class="project-img">
-        <p>Website pendidikan yang memiliki halaman login, dan setelah login menampilkan biodata siswa.</p>
-    </details>
+    <input type="checkbox" id="loadMoreToggle" class="load-more-checkbox">
+    <div class="hidden-projects">
+        <div class="projects-grid">
+            <div class="project-card">
+                <summary>Web Pendidikan (Login & Biodata Siswa)</summary>
+                <img src="pendidikan.jpeg" alt="Web Pendidikan" class="project-img">
+                <p>Website pendidikan yang memiliki halaman login, dan setelah login menampilkan biodata siswa.</p>
+            </div>
 
-    <details class="project-card hover-grow">
-        <summary>Loginpage Tokopedia</summary>
-        <img src="tokopedia.jpeg" alt="Loginpage Tokopedia" class="project-img">
-        <p>Tampilan halaman login Tokopedia versi sederhana menggunakan HTML & CSS.</p>
-    </details>
+            <div class="project-card">
+                <summary>Loginpage Tokopedia</summary>
+                <img src="tokopedia.jpeg" alt="Loginpage Tokopedia" class="project-img">
+                <p>Tampilan halaman login Tokopedia versi sederhana menggunakan HTML & CSS.</p>
+            </div>
 
-    <details class="project-card hover-grow">
-        <summary>Perakitan Gundam (Model Kit)</summary>
-        <img src="gundam.jpeg" alt="Merakit Gundam" class="project-img">
-        <p>Dokumentasi proses merakit Gundam model kit beserta hasil akhirnya.</p>
-    </details>
+            <div class="project-card">
+                <summary>Perakitan Gundam (Model Kit)</summary>
+                <img src="gundam.jpeg" alt="Merakit Gundam" class="project-img">
+                <p>Dokumentasi proses merakit Gundam model kit beserta hasil akhirnya.</p>
+            </div>
+        </div>
+    </div>
+
+    <label for="loadMoreToggle" class="load-more-label">Load More</label>
 </section>
+
 
 <section id="contact" class="contact slide-up">
     <h2>Kontak</h2>
 
-    <div class="contact-card">
-        <p>📧 <a href="mailto:ai.aisyah2604@gmail.com">ai.aisyah2604@gmail.com</a></p>
-    </div>
+    <div class="contact-container">
+        <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-text"><a href="mailto:ai.aisyah2604@gmail.com">ai.aisyah2604@gmail.com</a></div>
+        </div>
 
-    <div class="contact-card">
-        <p>💬 <a href="https://wa.me/62895636420404" target="_blank">0895-6364-20404</a></p>
+        <div class="contact-item">
+            <div class="contact-icon">💬</div>
+            <div class="contact-text"><a href="https://wa.me/62895636420404" target="_blank">0895-6364-20404</a></div>
+        </div>
     </div>
 </section>
 
