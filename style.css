@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -9,24 +8,23 @@
 }
 
 body {
-    background: #fff5f5;
+    background: linear-gradient(to bottom, #fdeaea, #ffe5e5);
     color: #333;
     line-height: 1.6;
 }
 
 a {
-    color: #fff;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    opacity: 0.8;
 }
 
-/* HEADER & NAVBAR */
 header {
     background-color: #8B0000;
-    padding: 10px 40px;
+    padding: 15px 40px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
 
 nav {
@@ -37,7 +35,8 @@ nav {
 
 .logo-area {
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    align-items: center;
 }
 
 .logo-img {
@@ -55,106 +54,202 @@ nav {
 .nav-links li a {
     color: #fff;
     font-weight: 500;
+    padding: 8px 12px;
+    transition: 0.3s ease;
 }
 
 .nav-links li a:hover {
-    background-color: #b30000;
-    border-radius: 6px;
+    background-color: #ffffff25;
+    border-radius: 8px;
 }
 
-/* HERO */
 .hero {
-    padding: 50px 20px;
+    padding: 70px 20px;
     text-align: center;
+    background: linear-gradient(140deg, #8B0000, #b30000);
+    color: white;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 10px;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    animation: fadeInDown 1s ease;
 }
 
 .hero p {
-    color: #ffe6e6;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    animation: fadeIn 1.4s ease;
 }
 
-/* SECTIONS */
 section {
-    max-width: 900px;
-    margin: 50px auto;
+    max-width: 1000px;
+    margin: 60px auto;
     padding: 0 20px;
 }
 
 section h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #8B0000;
-    border-bottom: 2px solid #8B0000;
+    font-weight: 600;
+    position: relative;
 }
 
-/* TENTANG SAYA */
+section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #8B0000;
+    margin-top: 6px;
+    border-radius: 5px;
+}
+
 .about-container {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     align-items: flex-start;
+    background: #fff1f1;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
 }
 
 .about-img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+    width: 130px;
+    height: 130px;
     border-radius: 15px;
+    object-fit: cover;
 }
 
 .about-text {
     flex: 1;
 }
 
-/* PROJECTS & CONTACT */
-.project-card, .contact-card {
-    background-color: #8B0000;
-    color: #fff;
-    border-radius: 12px;
-    padding: 20px;
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    position: relative;
+    background: linear-gradient(135deg, #ff9999, #ffe6e6);
+    color: #8B0000;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
     margin-bottom: 20px;
 }
 
-.project-card:hover, .contact-card:hover {
-    transform: translateY(-3px);
+.hidden-projects {
+    display: none;
+}
+
+.load-more-checkbox:checked ~ .hidden-projects {
+    display: block;
+}
+
+.project-card {
+    background: linear-gradient(145deg, #9e1a1a, #b31c1c);
+    color: #fff1f1;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #7a0000;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3), 0 0 20px rgba(255,150,150,0.1) inset;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-img {
     width: 100%;
-    max-width: 450px;
-    display: block;
+    max-width: 100%;
+    border-radius: 12px;
     margin: 15px 0;
-    border-radius: 10px;
+    object-fit: cover;
 }
 
-.contact-card a {
-    font-weight: bold;
-    color: #fff;
+.load-more-label {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #ff9999, #ffe6e6);
+    color: #8B0000;
+    font-weight: 600;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.contact-card a:hover {
-    color: #ff6666;
+.load-more-label:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* FOOTER */
+.load-more-checkbox:checked ~ .hidden-projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff9999, #ffe6e6);
+    color: #8B0000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.contact-text a {
+    color: #8B0000;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.contact-text a:hover {
+    color: #b30000;
+}
+
 footer {
     background-color: #8B0000;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
-}
-
-/* ANIMATIONS */
-.fade-in {
-    animation: fadeIn 1s ease-in-out;
-}
-
-.slide-up {
-    animation: slideUp 1s ease-in-out;
+    padding: 18px 0;
+    margin-top: 60px;
 }
 
 @keyframes fadeIn {
@@ -162,13 +257,12 @@ footer {
     to { opacity: 1; }
 }
 
-@keyframes slideUp {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+@media(max-width: 768px) {
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -176,15 +270,16 @@ footer {
 
     .nav-links {
         flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
+        gap: 12px;
+        margin-top: 12px;
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .about-container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    section {
-        margin: 30px auto;
+    .about-img {
+        margin: 0 auto;
     }
 }
